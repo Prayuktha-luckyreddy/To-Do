@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 24px 20px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  color: #111827;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+#task-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+#add-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+#add-btn:hover {
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+#add-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+#task-list {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.task-item span {
+  flex: 1;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.task-item:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
